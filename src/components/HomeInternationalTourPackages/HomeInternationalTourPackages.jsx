@@ -61,7 +61,7 @@ export const HomeInternationalTourPackages = () => {
     ];
 
     return (
-        <section className="layout-pt-xl layout-pb-xl">
+        <section className="layout-pt-xl layout-pb-xl international-tour-container">
             <div className="container">
                 <div className="row justify-between items-end y-gap-10">
                     <div className="col-auto">
@@ -95,7 +95,7 @@ export const HomeInternationalTourPackages = () => {
                                     </div>
                                     
                                 </div>
-                                <div className="tourCard__content px-20 py-10">
+                                <div className="tourCard__content px-20 py-10 international-tour-card">
                                     <div className="tourCard__location d-flex items-center text-13 text-light-2">
                                         <i className="icon-pin d-flex text-16 text-light-2 mr-5" />
                                         {tour.location}

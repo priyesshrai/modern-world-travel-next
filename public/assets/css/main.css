@@ -14095,3 +14095,28 @@ button.gm-ui-hover-effect::after {
     font-weight: 600;
     color: var(--logo-color1);
 }
+/* .international-tour-card {
+    position: relative;
+    box-shadow: inset 0 0 0 0 #aa833f;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.international-tour-card:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background-color: #410f06;
+    transition: all 0.3s ease-in-out;
+}
+.tourCard:hover .international-tour-card::before {
+    right: 0;
+}
+.tourCard:hover .tourCard__location,
+.tourCard:hover .tourCard__location i
+{
+  color: #FFFFFF;
+} */
