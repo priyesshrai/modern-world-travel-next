@@ -14191,3 +14191,22 @@ button.gm-ui-hover-effect::after {
     background-repeat: no-repeat;
     background-position: center;
 }
+/*Contact us*/
+
+.info-block-two .inner-box {
+    position: relative;
+    display: block;
+    padding: 0px 0px 0px 110px;
+    margin-bottom: 60px;
+}
+.content_block_six .content-box .form-inner {
+    position: relative;
+    display: block;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 70px 0px #0000001A;
+    padding: 20px;
+}
+
+
+/*Contact us*/

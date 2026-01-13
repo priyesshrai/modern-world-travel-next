@@ -363,10 +363,10 @@ export const Header = () => {
                                     </div>
                                 </div>
                                 <div className="desktopNav__item">
-                                    <a href="#" className="desktopNav__item_a">Blog</a>
+                                    <Link href="/blog" className="desktopNav__item_a">Blog</Link>
                                 </div>
                                 <div className="desktopNav__item">
-                                    <a href="#" className="desktopNav__item_a">Contact Us</a>
+                                    <Link href="/contact-us" className="desktopNav__item_a">Contact Us</Link>
                                 </div>
                             </div>
                         </div>
