@@ -3154,7 +3154,9 @@ h1, h2, h3{
 .header.-type-10 .header__menuBtn i {
   font-size: 20px;
 }
-
+.footer  p{
+  margin: 0px;
+}
 .footer.-type-1 .footer__main {
   position: relative;
   z-index: 0;
