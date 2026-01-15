@@ -199,55 +199,90 @@ export default function TourPackageDetailsPage() {
                                 </div>
                             </div>
                             <div className="col-lg-4 relative">
-                                <div className="sidebar -type-2 sticky top-20">
-                                    <div className="sidebar__item">
-                                        <h3 className="text-20 fw-600 mb-20">Covered Cities</h3>
-                                        <div className="d-flex y-gap-20 flex-column">
-                                            <a href="#" className="d-flex align-center">
-                                                <div className="size-70 overflow-hidden rounded-12">
-                                                    <img
-                                                        src="/assets/modern-img/Vrindavan.jpg"
-                                                        alt="image"
-                                                        className="img-cover"
-                                                    />
+                                <div className="sticky top-20">
+                                    <div className="sidebar -type-2">
+                                        <div className="sidebar__item">
+                                            <h3 className="text-24 fw-600 mb-20">Covered Cities</h3>
+                                            <div className="d-flex y-gap-20 flex-column">
+                                                <a href="#" className="d-flex align-center">
+                                                    <div className="size-70 overflow-hidden rounded-12">
+                                                        <img
+                                                            src="/assets/modern-img/Vrindavan.jpg"
+                                                            alt="image"
+                                                            className="img-cover"
+                                                        />
+                                                    </div>
+                                                    <div className="ml-20">
+                                                        <h5 className="text-15 lh-14 fw-500">
+                                                            10 of the Best Solo Travel Destinations for Women
+                                                        </h5>
+
+                                                    </div>
+                                                </a>
+                                                <a href="#" className="d-flex align-center">
+                                                    <div className="size-70 overflow-hidden rounded-12">
+                                                        <img
+                                                            src="/assets/modern-img/Vrindavan.jpg"
+                                                            alt="image"
+                                                            className="img-cover"
+                                                        />
+                                                    </div>
+                                                    <div className="ml-20">
+                                                        <h5 className="text-15 lh-14 fw-500">
+                                                            10 of the Best Solo Travel Destinations for Women
+                                                        </h5>
+
+                                                    </div>
+                                                </a>
+                                                <a href="#" className="d-flex align-center">
+                                                    <div className="size-70 overflow-hidden rounded-12">
+                                                        <img
+                                                            src="/assets/modern-img/Vrindavan.jpg"
+                                                            alt="image"
+                                                            className="img-cover"
+                                                        />
+                                                    </div>
+                                                    <div className="ml-20">
+                                                        <h5 className="text-15 lh-14 fw-500">
+                                                            10 of the Best Solo Travel Destinations for Women
+                                                        </h5>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="book-this-tour mt-3 bg-white rounded-xl shadow-lg border border-gray-100 p-2 md:p-2">
+                                        <div className="book-tour-header">
+                                            <div className="py-3 md:py-2 text-center">
+                                                <h3 className="text-24 text-[#eb6605]! fw-600 mb-5">
+                                                    Book This Tour
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div className="book_form">
+                                            <div className="contactForm">
+                                                <div className="row y-gap-15">
+                                                    <div className="col-md-12">
+                                                        <input type="text" placeholder="Name" />
+                                                    </div>
+                                                    <div className="col-md-12">
+                                                        <input type="text" placeholder="Phone" />
+                                                    </div>
+                                                    <div className="col-12">
+                                                        <input type="text" placeholder="Email" />
+                                                    </div>
+                                                    <div className="col-12">
+                                                        <textarea placeholder="Message" rows={6} defaultValue={""} />
+                                                    </div>
+                                                    <div className="col-12">
+                                                        <button className="button -md -dark-1 bg-accent-1 text-white col-12">
+                                                            Send Enquiry
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <div className="ml-20">
-                                                    <h5 className="text-15 lh-14 fw-500">
-                                                        10 of the Best Solo Travel Destinations for Women
-                                                    </h5>
-                                                    
-                                                </div>
-                                            </a>
-                                            <a href="#" className="d-flex align-center">
-                                                <div className="size-70 overflow-hidden rounded-12">
-                                                    <img
-                                                        src="/assets/modern-img/Vrindavan.jpg"
-                                                        alt="image"
-                                                        className="img-cover"
-                                                    />
-                                                </div>
-                                                <div className="ml-20">
-                                                    <h5 className="text-15 lh-14 fw-500">
-                                                        10 of the Best Solo Travel Destinations for Women
-                                                    </h5>
-                                                    
-                                                </div>
-                                            </a>
-                                            <a href="#" className="d-flex align-center">
-                                                <div className="size-70 overflow-hidden rounded-12">
-                                                    <img
-                                                        src="/assets/modern-img/Vrindavan.jpg"
-                                                        alt="image"
-                                                        className="img-cover"
-                                                    />
-                                                </div>
-                                                <div className="ml-20">
-                                                    <h5 className="text-15 lh-14 fw-500">
-                                                        10 of the Best Solo Travel Destinations for Women
-                                                    </h5>
-                                                    
-                                                </div>
-                                            </a>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
