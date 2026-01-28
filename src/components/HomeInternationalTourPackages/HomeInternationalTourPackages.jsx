@@ -1,5 +1,8 @@
+'use client';
 import React from 'react'
 import { Heading } from '../Heading/Heading';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 export const HomeInternationalTourPackages = () => {
     const tourPackages = [
         {
@@ -59,7 +62,15 @@ export const HomeInternationalTourPackages = () => {
             duration: "4 days 3 Night"
         }
     ];
-
+    const { data, isLoading, isError, isFetching, error } = useQuery({
+        queryKey: ["International-Tour-Packages"],
+        queryFn: async () => {
+            const res = await axios.get('https://www.gdsons.co.in/draft/mwt/api/home-international-tour');
+            return res.data;
+        },
+        retry: 1,
+        placeholderData: (old) => old,
+    });
     return (
         <section className="layout-pt-xl layout-pb-xl international-tour-container">
             <div className="container">
@@ -78,12 +89,12 @@ export const HomeInternationalTourPackages = () => {
                         </button>
                     </div>
                 </div>
-                <div className="row y-gap-30 justify-between pt-30 sm:pt-20 mobile-css-slider -w-300">
-                    {tourPackages.map((tour) => (
-                        <div key={tour.id} className="col-lg-3 col-md-6">
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mobile-css-slider -w-300 gap-5 mt-8!">
+                    {data && data.map((tour) => (
+                        <div key={tour.nid} className="w-full h-full">
                             <a
-                                href="#"
-                                className="tourCard -type-1 d-block border-1 bg-white hover-shadow-1 overflow-hidden rounded-12 -hover-shadow"
+                                href={tour.url}
+                                className="tourCard -type-1 d-block border bg-white hover-shadow-1 overflow-hidden rounded-12 hover-shadow h-full! group flex! flex-col! justify-between!"
                             >
                                 <div className="tourCard__header">
                                     <div className="tourCard__image -hover-image-scale__image ratio ratio-28:20">
@@ -93,19 +104,22 @@ export const HomeInternationalTourPackages = () => {
                                             className="img-ratio"
                                         />
                                     </div>
-                                    
+
                                 </div>
-                                <div className="tourCard__content px-20 py-10 international-tour-card">
-                                    <div className="tourCard__location d-flex items-center text-13 text-light-2">
+                                <div className="tourCard__content px-20 py-10 international-tour-card flex! flex-col! justify-between! gap-2!">
+                                    {/* <div className="tourCard__location d-flex items-center text-13 text-light-2">
                                         <i className="icon-pin d-flex text-16 text-light-2 mr-5" />
                                         {tour.location}
-                                    </div>
+                                    </div> */}
                                     <Heading
                                         level={5}
                                         text={tour.title}
-                                        className="ttourCard__title text-18 fw-500 mt-5"
-                                    /> 
-                                    <div className="d-flex justify-between items-center border-1-top text-13 text-dark-1 pt-10 mt-10 home-duration">
+                                        className="ttourCard__title  fw-500 mt-5 leading-tight! "
+                                    />
+                                    <p className='relative text-base! text-zinc-500 leading-tight! z-10! line-clamp-4 group-hover:text-white! transition-colors duration-200 ease-in-out'>
+                                        {tour.description}
+                                    </p>
+                                    <div className="d-flex justify-between items-center border-1-top text-13 text-dark-1 pt-4! mt-2! home-duration">
                                         <div className="d-flex items-center duration-content">
                                             <i className="icon-clock text-16 mr-5" />
                                             {tour.duration}
