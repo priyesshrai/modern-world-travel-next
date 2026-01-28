@@ -75,44 +75,47 @@ export const Header = () => {
                                                 {menu.title}
                                                 <i className="icon-chevron-down" />
                                             </Link>
-
                                             {menu.sections && menu.sections.length > 0 && (
-                                                <div className="desktopNavMega">
-                                                    <div className="desktopNavMega__container">
-                                                        <div className="desktopNavMega__lists">
-                                                            {menu.sections.map((section) => (
-                                                                <div className="desktopNavMega-list" key={section.title}>
-                                                                    <div className="desktopNavMega-list__item">
-                                                                        <div className="desktopNavMega-list__title">
-                                                                            {section.title}
-                                                                        </div>
+                                                <>
+                                                    <div className="desktopNavMega">
+                                                        <div className="desktopNavMega__container">
+                                                            <div className="desktopNavMega__lists">
+                                                                {menu.sections.map((section) => (
+                                                                    <div className="desktopNavMega-list" key={section.title}>
+                                                                        <div className="desktopNavMega-list__item">
+                                                                            <div className="desktopNavMega-list__title">
+                                                                                {section.title}
+                                                                            </div>
 
-                                                                        <div className="desktopNavMega-list__list">
-                                                                            {section.items &&
-                                                                                section.items.map((item, idx) => (
-                                                                                    <div
-                                                                                        className="desktopNavMega-list__link"
-                                                                                        key={idx}
-                                                                                    >
-                                                                                        <a href={`/${item.url}`} className='text-sm! m-0! leading-tight'>
-                                                                                            {item.name}
-                                                                                        </a>
-                                                                                        {
-                                                                                            item.duration && (
-                                                                                                <span className="text-[10px] text-[#EB662B] leading-[2px] ">
-                                                                                                    {item.duration}
-                                                                                                </span>
-                                                                                            )
-                                                                                        }
-                                                                                    </div>
-                                                                                ))}
+                                                                            <div className="desktopNavMega-list__list">
+                                                                                {section.items &&
+                                                                                    section.items.map((item, idx) => (
+                                                                                        <div
+                                                                                            className="desktopNavMega-list__link"
+                                                                                            key={idx}
+                                                                                        >
+                                                                                            <a
+                                                                                                href={`${section.title === "Favourite Cities" ? "/city" : menu.title === "Packages" ? "/tour-package" : "/tours-location"}/${item.url}`}
+                                                                                                className='text-sm! m-0! leading-tight'>
+                                                                                                {item.name}
+                                                                                            </a>
+                                                                                            {
+                                                                                                item.duration && (
+                                                                                                    <span className="text-[10px] text-[#EB662B] leading-[2px] ">
+                                                                                                        {item.duration}
+                                                                                                    </span>
+                                                                                                )
+                                                                                            }
+                                                                                        </div>
+                                                                                    ))}
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            ))}
+                                                                ))}
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </>
                                             )}
                                         </div>
                                     ))
